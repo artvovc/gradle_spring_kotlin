@@ -1,6 +1,6 @@
 package com.mycompany.servername.server.controller;
 
-import com.mycompany.servername.server.facade.Base;
+import com.mycompany.webservername.db.model.Base;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

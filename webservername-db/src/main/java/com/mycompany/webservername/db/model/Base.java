@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.facade;
+package com.mycompany.webservername.db.model;
 
 import java.io.Serializable;
 
