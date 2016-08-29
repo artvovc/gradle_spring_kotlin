@@ -1,0 +1,101 @@
+buildscript {
+    ext {
+        DEPENDENCY_MANAGEMENT_VERSION = '0.6.0.RELEASE'
+        KOTLIN_VERSION = '1.0.3'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    dependencies {
+
+        // https://mvnrepository.com/artifact/io.spring.gradle/dependency-management-plugin
+        classpath group: 'io.spring.gradle', name: 'dependency-management-plugin', version: "$DEPENDENCY_MANAGEMENT_VERSION"
+
+        // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
+        classpath group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: "$KOTLIN_VERSION"
+
+    }
+}
+
+import groovy.transform.Field
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//__________________________-Global variables (initialize after buildscript)__________________
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@Field
+def JUNIT_VERSION = '4.12'
+@Field
+def JACKSON_DATABIND = '2.8.1'
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//__________________________-Global variables END__________________
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+allprojects {
+    group 'com.webservername'
+    version '1.0-SNAPSHOT'
+}
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//__________________________-ROOT CONFIGURATION__________________
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+repositories {
+    mavenCentral()
+}
+apply plugin: 'kotlin'
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: "$KOTLIN_VERSION"
+
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit
+    testCompile group: 'org.jetbrains.kotlin', name: 'kotlin-test-junit', version: "$KOTLIN_VERSION"
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//__________________________-ROOT CONFIGURATION END__________________
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'kotlin'
+    apply plugin: 'idea'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    dependencyManagement {
+        imports {
+            mavenBom 'io.spring.platform:platform-bom:1.1.2.RELEASE'
+        }
+    }
+
+    dependencies {
+
+        // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
+        compile group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: "$KOTLIN_VERSION"
+
+        // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$JACKSON_DATABIND"
+
+        // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: "$JACKSON_DATABIND"
+
+        // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: "$JACKSON_DATABIND"
+
+        // https://mvnrepository.com/artifact/junit/junit
+        compile group: 'junit', name: 'junit', version: "$JUNIT_VERSION"
+
+        // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit
+        testCompile group: 'org.jetbrains.kotlin', name: 'kotlin-test-junit', version: "$KOTLIN_VERSION"
+
+    }
+}

@@ -1,0 +1,15 @@
+import groovy.transform.Field
+@Field
+def SWAGGER_VERSION = '1.5.10'
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+
+dependencies {
+
+    compile project (':webservername-db')
+
+    // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
+    compile group: 'io.swagger', name: 'swagger-annotations', version: "$SWAGGER_VERSION"
+}

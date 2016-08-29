@@ -1,0 +1,5 @@
+rootProject.name = 'web-server-gradle-kotlin-spring'
+
+include "webservername-server", "webservername-core", "webservername-db"
+
+

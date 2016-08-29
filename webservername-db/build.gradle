@@ -1,0 +1,79 @@
+import groovy.transform.Field
+
+@Field
+def COMMONS_DBCP2 = '2.1.1'
+@Field
+def SPRING_TX = '4.3.2.RELEASE'
+@Field
+def SPRING_WEBMVC = '4.3.2.RELEASE'
+@Field
+def SPRING_ORM = '4.3.2.RELEASE'
+@Field
+def HIBERNATE_CORE = '5.2.2.Final'
+@Field
+def HIBERNATE_VALIDATOR = '5.2.4.Final'
+@Field
+def VALIDATION_API = '1.1.0.Final'
+@Field
+def MYSQL_CONNECTOR_JAVA = '6.0.3'
+@Field
+def LIQUIBASE_CORE = '3.5.1'
+@Field
+def MONGO_JAVA_DRIVER = '3.3.0'
+@Field
+def SPRING_DATA_MONGODB = '1.9.2.RELEASE'
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: "$COMMONS_DBCP2"
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-tx
+    compile group: 'org.springframework', name: 'spring-tx', version: "$SPRING_TX"
+
+//    // https://mvnrepository.com/artifact/org.springframework/spring-beans
+//    compile group: 'org.springframework', name: 'spring-beans', version: "$SPRING_WEBMVC"
+//
+//    // https://mvnrepository.com/artifact/org.springframework/spring-core
+//    compile group: 'org.springframework', name: 'spring-core', version: "$SPRING_WEBMVC"
+//
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    compile group: 'org.springframework', name: 'spring-context', version: "$SPRING_WEBMVC"
+//
+//    // https://mvnrepository.com/artifact/org.springframework/spring-aop
+//    compile group: 'org.springframework', name: 'spring-aop', version: "$SPRING_WEBMVC"
+//
+//    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+//    compile group: 'org.springframework', name: 'spring-jdbc', version: "$SPRING_WEBMVC"
+//
+//    // https://mvnrepository.com/artifact/org.springframework/spring-expression
+//    compile group: 'org.springframework', name: 'spring-expression', version: "$SPRING_WEBMVC"
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-orm
+    compile group: 'org.springframework', name: 'spring-orm', version: "$SPRING_ORM"
+
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    compile group: 'org.hibernate', name: 'hibernate-core', version: "$HIBERNATE_CORE"
+
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+    compile group: 'org.hibernate', name: 'hibernate-validator', version: "$HIBERNATE_VALIDATOR"
+
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    compile group: 'javax.validation', name: 'validation-api', version: "$VALIDATION_API"
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: "$MYSQL_CONNECTOR_JAVA"
+
+    // https://mvnrepository.com/artifact/org.liquibase/liquibase-core
+    compile group: 'org.liquibase', name: 'liquibase-core', version: "$LIQUIBASE_CORE"
+
+    // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: "$MONGO_JAVA_DRIVER"
+
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb
+    compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: "$SPRING_DATA_MONGODB"
+
+}
