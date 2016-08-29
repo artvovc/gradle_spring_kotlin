@@ -1,6 +1,6 @@
-package com.mycompany.servername.server.kotlinbased.controller
+package com.mycompany.webservername.kotlinbased.server.controller
 
-import com.mycompany.servername.server.kotlinbased.facade.Base
+import com.mycompany.webservername.kotlinbased.server.facade.Base
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
@@ -20,11 +20,11 @@ class AController {
     internal val log = Logger.getLogger(AController::class.java)
 
     @GetMapping(path = arrayOf("/lol"), produces = arrayOf(MediaType.APPLICATION_JSON_VALUE))
-    fun work(request: HttpServletRequest,response: HttpServletResponse): HttpEntity<Base> {
+    fun work(request: HttpServletRequest, response: HttpServletResponse): HttpEntity<Base> {
         val base = Base()
         base.name = "WORK"
         log.info("LOG WORK")
-        return ResponseEntity(base,HttpStatus.OK)
+        return ResponseEntity(base, HttpStatus.OK)
     }
 
 }

@@ -1,7 +1,7 @@
-package com.mycompany.servername.server.initializer;
+package com.mycompany.webservername.server.initializer;
 
-import com.mycompany.servername.server.config.AppContextConfig;
-import com.mycompany.servername.server.config.DispatcherConfig;
+import com.mycompany.webservername.server.config.AppContextConfig;
+import com.mycompany.webservername.server.config.DispatcherConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;

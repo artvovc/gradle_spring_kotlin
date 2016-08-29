@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.kotlinbased.config
+package com.mycompany.webservername.kotlinbased.server.config
 
 import org.springframework.context.annotation.Configuration
 

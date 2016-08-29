@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.config;
+package com.mycompany.webservername.server.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * Created by Artemie on 26.08.2016.
  */
 @Configuration
-@ComponentScan(basePackages = {"com.mycompany.servername.server.controller"})
+@ComponentScan(basePackages = {"com.mycompany.webservername.server.controller"})
 @Import(SwaggerConfig.class)
 @EnableWebMvc
 public class DispatcherConfig extends WebMvcConfigurerAdapter {

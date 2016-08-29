@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.kotlinbased.config
+package com.mycompany.webservername.kotlinbased.server.config
 
 
 import org.springframework.context.annotation.ComponentScan
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 
 @Configuration
-@ComponentScan(basePackages = arrayOf("com.mycompany.servername.server.kotlinbased.controller"))
+@ComponentScan(basePackages = arrayOf("com.mycompany.webservername.kotlinbased.server.controller"))
 @Import(SwaggerConfig::class)
 @EnableWebMvc
 open class DispatcherConfig : WebMvcConfigurerAdapter() {

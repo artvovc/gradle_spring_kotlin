@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.kotlinbased.facade
+package com.mycompany.webservername.kotlinbased.server.facade
 
 import java.io.Serializable
 

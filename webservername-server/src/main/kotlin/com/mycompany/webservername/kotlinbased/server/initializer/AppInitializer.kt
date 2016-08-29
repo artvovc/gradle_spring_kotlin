@@ -1,7 +1,7 @@
-package com.mycompany.servername.server.kotlinbased.initializer
+package com.mycompany.webservername.kotlinbased.server.initializer
 
-import com.mycompany.servername.server.kotlinbased.config.AppContextConfig
-import com.mycompany.servername.server.kotlinbased.config.DispatcherConfig
+import com.mycompany.webservername.kotlinbased.server.config.AppContextConfig
+import com.mycompany.webservername.kotlinbased.server.config.DispatcherConfig
 import org.springframework.web.WebApplicationInitializer
 import org.springframework.web.context.ContextLoaderListener
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext

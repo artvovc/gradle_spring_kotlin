@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.config;
+package com.mycompany.webservername.server.config;
 
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;

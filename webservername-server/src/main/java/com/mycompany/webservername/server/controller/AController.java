@@ -1,4 +1,4 @@
-package com.mycompany.servername.server.controller;
+package com.mycompany.webservername.server.controller;
 
 import com.mycompany.webservername.db.model.Base;
 import org.springframework.http.HttpEntity;
