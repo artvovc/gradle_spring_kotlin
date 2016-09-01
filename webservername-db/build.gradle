@@ -34,23 +34,23 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-tx
     compile group: 'org.springframework', name: 'spring-tx', version: "$SPRING_TX"
 
-//    // https://mvnrepository.com/artifact/org.springframework/spring-beans
-//    compile group: 'org.springframework', name: 'spring-beans', version: "$SPRING_WEBMVC"
-//
-//    // https://mvnrepository.com/artifact/org.springframework/spring-core
-//    compile group: 'org.springframework', name: 'spring-core', version: "$SPRING_WEBMVC"
-//
+    // https://mvnrepository.com/artifact/org.springframework/spring-beans
+    compile group: 'org.springframework', name: 'spring-beans', version: "$SPRING_WEBMVC"
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    compile group: 'org.springframework', name: 'spring-core', version: "$SPRING_WEBMVC"
+
     // https://mvnrepository.com/artifact/org.springframework/spring-context
     compile group: 'org.springframework', name: 'spring-context', version: "$SPRING_WEBMVC"
-//
-//    // https://mvnrepository.com/artifact/org.springframework/spring-aop
-//    compile group: 'org.springframework', name: 'spring-aop', version: "$SPRING_WEBMVC"
-//
-//    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-//    compile group: 'org.springframework', name: 'spring-jdbc', version: "$SPRING_WEBMVC"
-//
-//    // https://mvnrepository.com/artifact/org.springframework/spring-expression
-//    compile group: 'org.springframework', name: 'spring-expression', version: "$SPRING_WEBMVC"
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-aop
+    compile group: 'org.springframework', name: 'spring-aop', version: "$SPRING_WEBMVC"
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+    compile group: 'org.springframework', name: 'spring-jdbc', version: "$SPRING_WEBMVC"
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-expression
+    compile group: 'org.springframework', name: 'spring-expression', version: "$SPRING_WEBMVC"
 
     // https://mvnrepository.com/artifact/org.springframework/spring-orm
     compile group: 'org.springframework', name: 'spring-orm', version: "$SPRING_ORM"
@@ -70,10 +70,12 @@ dependencies {
     // https://mvnrepository.com/artifact/org.liquibase/liquibase-core
     compile group: 'org.liquibase', name: 'liquibase-core', version: "$LIQUIBASE_CORE"
 
-    // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
     compile group: 'org.mongodb', name: 'mongo-java-driver', version: "$MONGO_JAVA_DRIVER"
 
     // https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb
     compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: "$SPRING_DATA_MONGODB"
+
+
+
 
 }
